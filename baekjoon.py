@@ -1036,11 +1036,6 @@ print(*ans_dic)
 #     arr[j-1]=sav
 # print(*arr)
 
-## 17103 골드바흐 파티션
-import sys
-ipnut = sys.stdin.readline
-n = int(input())
-
 # def list_prime(a): ## 얘는 진짜 왜 안되냐
 #     sieve = [True]*a
 #     for i in range(2,int(a**0.5)+1):
@@ -1049,23 +1044,45 @@ n = int(input())
 #                 sieve[j]==False
 #     return [i for i in range(2,a) if sieve[i]==True]
 
-def prime_list(b): ## 에라토스테네스의 체 구현2
-    sieve = [True]*b
-    for i in range(2,int(b**0.5)+1):
-        if sieve[i]==True:
-            for j in range(i+i,b,i):
-                sieve[j] = False
-    return [i for i in range(2,b) if sieve[i] == True]
+## 17103 골드바흐 파티션
+# import sys
+# ipnut = sys.stdin.readline
+# out = sys.stdout.write
+# n = int(input())
+# li=[]
 
-for _ in range(n):
-    num = int(input())
-    li = prime_list(num)
-    cnt = 0
-    sa = 0
-    for i in range(len(li)):
-        for j in range(len(li)):
-            if li[i]+li[j] == num and li[i]!=li[j]:
-                cnt += 1
-            if li[i]+li[j] == num and li[i]==li[j]:
-                sa+=1
-    print(cnt//2+sa)
+# def prime_list(b): ## 에라토스테네스의 체 구현2
+#     sieve = [True]*b
+#     for i in range(2,int(b**0.5)+1):
+#         if sieve[i]==True:
+#             for j in range(i+i,b,i):
+#                 sieve[j] = False
+#     return [i for i in range(2,b) if sieve[i] == True],sieve
+
+# for _ in range(n):li.append(int(input()))
+
+# arr,ck=prime_list(max(li))
+# ck[0],ck[1]=False,False
+
+# for i in li:
+#     cnt = 0
+#     for j in range(len(arr)):
+#         if i < arr[j]:break
+#         elif ck[i-arr[j]]:cnt+=1
+
+#     if i//2 in arr:
+#         out(str(cnt//2 + 1)+'\n')
+#     else:
+#         out(str(cnt//2)+'\n')
+
+## 10872 팩토리얼
+import sys
+
+def fac(n): ## 이게 왜 되냐
+    ans=1
+    if n>0:
+        ans = n*fac(n-1)
+    return ans
+
+n=int(sys.stdin.readline())
+print(fac(n))
