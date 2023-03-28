@@ -972,6 +972,58 @@ print(*ans_dic)
 #     else:
 #         print(len(prime_list(n,2*n)))
 
+## 2525 오븐 시계
+# import sys
+# input = sys.stdin.readline
+# A,B = map(int,input().split())
+# C=int(input())
+# A=A+C//60
+# B=B+C%60
+# A=A+B//60
+# B=B%60
+# A=A%24
+# print("%d %d" %(A,B))
+
+## 2480 주사위 세개
+# import sys
+# a,b,c = map(int,sys.stdin.readline().split())
+# if a==b and b==c:
+#     print(10000+a*1000)
+# elif a==b or b==c or a==c:
+#     li=[]
+#     li.append(a)
+#     li.append(b)
+#     li.append(c)
+#     li.sort()
+#     print(1000+li[1]*100)
+# else:
+#     ma=max(a,b,c)
+#     print(ma*100)
+
+## 10807 개수 세기
+# import sys
+# input = sys.stdin.readline
+# n=int(input())
+# li=list(map(int,input().split()))
+# find_num=int(input())
+# cnt=0
+# for i in li:
+#     if i == find_num:
+#         cnt+=1
+# print(cnt)
+
+## 10810 공 넣기
+# import sys
+# input = sys.stdin.readline
+# N,M = map(int,input().split())
+# arr=[0]*N
+# for i in range(M):
+#     a,b,c=map(int,input().split())
+#     if a==b:arr[a-1]=c
+#     else:
+#         for j in range(a-1,b):arr[j]=c
+# print(*arr)
+
 ## 10813 공 바꾸기
 # import sys
 # input=sys.stdin.readline
