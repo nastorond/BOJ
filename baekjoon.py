@@ -1076,13 +1076,101 @@ print(*ans_dic)
 #         out(str(cnt//2)+'\n')
 
 ## 10872 팩토리얼
+# import sys
+
+# def fac(n): ## 이게 왜 되냐
+#     ans=1
+#     if n>0:
+#         ans = n*fac(n-1)
+#     return ans
+
+# n=int(sys.stdin.readline())
+# print(fac(n))
+
+## 10870 피보나치 수 5
+# import sys
+
+# def fibo(n):
+#     ans = 1
+#     if n > 2:
+#         ans = fibo(n-1) + fibo(n-2)
+#     return ans
+
+# n=int(sys.stdin.readline())
+# if n==0:sys.stdout.write('0')
+# else:sys.stdout.write(str(fibo(n)))
+
+## 2747 피보나치 수
+# import sys
+
+# def fibo(n):
+#     if n==0: return arr[0]
+#     elif n==1: arr[1]=1; return arr[1]
+#     else:
+#         if arr[n-1]!=0 and arr[n-2]!=0:
+#             arr[n] = arr[n-1]+arr[n-2]
+#             return arr[n]
+#         else:
+#             arr[n]=fibo(n-1)+fibo(n-2); return arr[n]
+
+# # def fibo(n):
+# #     if n==0: return 0
+# #     if n==1: return 1
+# #     if n==2: return 1
+# #     if dp[n]: return dp[n]
+
+# #     dp[n] = fibo(n-1) + fibo(n-2) 
+# #     return dp[n]
+
+# n=int(sys.stdin.readline())
+# arr=[0]*(n+1)
+# sys.stdout.write(str(fibo(n)))
+
+## 25501 재귀의 귀재
+# import sys
+# input=sys.stdin.readline
+# out = sys.stdout.write
+
+# def recursion(s, l, r):
+#     if l >= r: return 1,l+1
+#     elif s[l] != s[r]: return 0,l+1
+#     else: return recursion(s, l+1, r-1)
+
+# def isPalindrome(s):
+#     a,b = recursion(s, 0, len(s)-1)
+#     return a,b
+
+# n=int(input())
+# for _ in range(n):
+#     S=input().rstrip()
+#     a,b=map(str,isPalindrome(S))
+#     out(a+' '+b+"\n")
+
+## 24060 알고리즘 수업 - 병합 정렬 1
 import sys
+input = sys.stdin.readline
 
-def fac(n): ## 이게 왜 되냐
-    ans=1
-    if n>0:
-        ans = n*fac(n-1)
-    return ans
+def merge_sort(a):
+    p=a[0];r=a[len(a)-1]
+    q=(p+r)//2
+    fir = A[:q]
+    las = A[q+1:]
+    merge_sort(fir)
+    merge_sort(las)
+    return merge(A,p,q,r)
 
-n=int(sys.stdin.readline())
-print(fac(n))
+def merge(A,p,q,r):
+    tmp=[0]*len(A)
+    i=p;j=q+1;t=1
+    while(i<=q and j<=r):
+        if A[i]<=A[j]:tmp[t]=A[i]
+        else: tmp[i]=A[j]
+    while i<=q:tmp[t]=A[i]
+    while j<=r:tmp[t]=A[j]
+    i=p;t=1
+    while i<=r:A[i]=tmp[t]
+    return A
+
+A,K=map(int,input().split())
+li=list(map(int,input().split()))
+print(merge_sort(li))
