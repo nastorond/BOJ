@@ -15,17 +15,14 @@
 # else:
 #     print(sja)
 
-## B번-특별한 작은 분수 실패
+## B번-특별한 작은 분수
 import sys
-x0,N = map(int, sys.stdin.readline().split())
-cnt=0
-ans=0
-while cnt!=N:
-    cnt+=1
-    if x0==0:
-        ans=0;break
-    elif x0%2==0: x0=x0//2
-    else: x0=2*x0
-    x0=x0^6
-    ans=x0
-print(ans)
+out=sys.stdout.write
+x,N = map(int,sys.stdin.readline().split())
+
+for i in range(N):
+    if x%2==0:
+        x=x//2
+        x=x^6
+    else: x=x*2;x=x^6
+out(str(x))
