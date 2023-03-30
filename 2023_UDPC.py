@@ -17,17 +17,14 @@
 # print('%d:%d' %(cnt1,cnt2))
 
 ## B번 UDPC 파티
-import sys
-v=list(map(str,sys.stdin.readline().rstrip()))
-cnt_uc,cnt_dp=0,0
-for i in v:
-    if 'U' in i or 'C' in i:cnt_uc+=1
-    else: cnt_dp+=1
+# import sys
+# v=list(map(str,sys.stdin.readline().rstrip()))
+# cnt_uc,cnt_dp=0,0
+# for i in v:
+#     if 'U' in i or 'C' in i:cnt_uc+=1
+#     else: cnt_dp+=1
 
-if cnt_dp==0:print('U')
-elif cnt_uc==1 and cnt_dp==1:print("DP")
-elif cnt_uc<cnt_dp:
-    if cnt_dp//2 < cnt_uc: print('U')
-    else: print('DP')
-elif cnt_uc>cnt_dp:
-    print('UDP')
+# ans=''
+# if cnt_uc>(cnt_dp+1)//2:ans+='U'
+# if cnt_dp>0:ans+='DP'
+# print(ans)

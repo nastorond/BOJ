@@ -1147,30 +1147,61 @@ print(*ans_dic)
 #     out(a+' '+b+"\n")
 
 ## 24060 알고리즘 수업 - 병합 정렬 1
+# import sys
+# input = sys.stdin.readline
+
+# def merge_sort(a,p,r):
+#     if p<r:
+#         q=(p+r)//2
+#         merge_sort(a,p,q)
+#         merge_sort(a,q+1,r)
+#         return merge(a,p,q,r)
+
+# def merge(A,p,q,r):
+#     global cnt, res
+#     i=p;j=q+1
+#     tmp=[]
+#     while(i<=q and j<=r):
+#         if A[i]<=A[j]:tmp.append(A[i]);i+=1
+#         else: tmp.append(A[j]);j+=1
+#     while i<=q:tmp.append(A[i]);i+=1
+#     while j<=r:tmp.append(A[j]);j+=1
+#     i=p;t=0
+#     while i<=r:
+#         cnt +=1
+#         if cnt==K:
+#             res=tmp[t]
+#         A[i]=tmp[t]
+#         i+=1
+#         t+=1
+#     return res
+
+# global cnt, res
+# cnt = 0
+# res = -1
+# A,K=map(int,input().split())
+# li=list(map(int,input().split()))
+# print(merge_sort(li,0,A-1))
+
+## 4779 칸토어 집합
 import sys
-input = sys.stdin.readline
+input=sys.stdin.readline
+out=sys.stdout.write
 
-def merge_sort(a):
-    p=a[0];r=a[len(a)-1]
-    q=(p+r)//2
-    fir = A[:q]
-    las = A[q+1:]
-    merge_sort(fir)
-    merge_sort(las)
-    return merge(A,p,q,r)
+def khan(n):
+    
+    if n[0]!=n[1]:
+        return n
+    else: 
+        return khan(n)
 
-def merge(A,p,q,r):
-    tmp=[0]*len(A)
-    i=p;j=q+1;t=1
-    while(i<=q and j<=r):
-        if A[i]<=A[j]:tmp[t]=A[i]
-        else: tmp[i]=A[j]
-    while i<=q:tmp[t]=A[i]
-    while j<=r:tmp[t]=A[j]
-    i=p;t=1
-    while i<=r:A[i]=tmp[t]
-    return A
-
-A,K=map(int,input().split())
-li=list(map(int,input().split()))
-print(merge_sort(li))
+# n=[]
+# while True: EOF 파일의 끝에서 입력을 멈춘다
+#     try:
+#         a = map(int, input().split())
+#         n.append(a)
+#     except EOFError:
+#         break
+n=int(input())
+arr=['\n']*3**n
+print(khan(arr))
