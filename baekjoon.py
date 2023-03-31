@@ -1183,25 +1183,35 @@ print(*ans_dic)
 # li=list(map(int,input().split()))
 # print(merge_sort(li,0,A-1))
 
+## 5597 과제 안 내신 분..?
+# import sys
+# ck=[0]*30
+# for _ in range(28):
+#     a=int(sys.stdin.readline())
+#     ck[a-1]=1
+# for i in range(30):
+#     if ck[i]==0:
+#         sys.stdout.write(str(i+1)+'\n')
+
 ## 4779 칸토어 집합
-import sys
-input=sys.stdin.readline
-out=sys.stdout.write
+# import sys
+# input=sys.stdin.readline
+# out=sys.stdout.write
 
-def khan(n):
+# def khan(n):
     
-    if n[0]!=n[1]:
-        return n
-    else: 
-        return khan(n)
+#     if n[0]!=n[1]:
+#         return n
+#     else: 
+#         return khan(n)
 
-# n=[]
-# while True: EOF 파일의 끝에서 입력을 멈춘다
-#     try:
-#         a = map(int, input().split())
-#         n.append(a)
-#     except EOFError:
-#         break
-n=int(input())
-arr=['\n']*3**n
-print(khan(arr))
+# # n=[]
+# # while True: EOF 파일의 끝에서 입력을 멈춘다
+# #     try:
+# #         a = map(int, input().split())
+# #         n.append(a)
+# #     except EOFError:
+# #         break
+# n=int(input())
+# arr=['\n']*3**n
+# print(khan(arr))
