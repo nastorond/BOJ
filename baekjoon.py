@@ -1193,6 +1193,30 @@ print(*ans_dic)
 #     if ck[i]==0:
 #         sys.stdout.write(str(i+1)+'\n')
 
+## 10828 스택
+# import sys
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# n=int(input())
+# li=[]
+# for _ in range(n):
+#     a=input().rstrip()
+#     if 'push' in a:
+#         a=list(a)
+#         num=a[5:]
+#         num=int("".join(num))
+#         li.append(num)
+#     elif 'pop' in a:
+#         if len(li)>0:print(li.pop())
+#         else:out('-1 \n')
+#     elif 'size' in a:print(len(li))
+#     elif 'empty' in a:
+#         if len(li)>0:out('0 \n')
+#         else:out('1 \n')
+#     elif 'top' in a:
+#         if len(li)>0:print(li[len(li)-1])
+#         else:out('-1 \n')
+
 ## 4779 칸토어 집합
 # import sys
 # input=sys.stdin.readline
