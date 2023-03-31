@@ -1217,6 +1217,28 @@ print(*ans_dic)
 #         if len(li)>0:print(li[len(li)-1])
 #         else:out('-1 \n')
 
+## 10773 제로
+# import sys
+# n=int(sys.stdin.readline())
+# li=[]
+# for _ in range(n):
+#     a=int(sys.stdin.readline())
+#     if a:
+#         li.append(a)
+#     else:
+#         li.pop()
+# sys.stdout.write(str(sum(li)))
+
+## 9012 괄호
+import sys
+n=int(sys.stdin.readline())
+for _ in range(n):
+    VPS = sys.stdin.readline()
+    print(VPS)
+
+
+
+
 ## 4779 칸토어 집합
 # import sys
 # input=sys.stdin.readline
