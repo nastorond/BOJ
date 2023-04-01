@@ -1229,12 +1229,21 @@ print(*ans_dic)
 #         li.pop()
 # sys.stdout.write(str(sum(li)))
 
+## 1271 엄청난 부자 2
+# import sys
+# out=sys.stdout.write
+# n,m=map(int,sys.stdin.readline().split())
+# out(str(n//m)+'\n')
+# out(str(n%m))
+
 ## 9012 괄호
 import sys
 n=int(sys.stdin.readline())
 for _ in range(n):
-    VPS = sys.stdin.readline()
-    print(VPS)
+    PS = list(sys.stdin.readline().rstrip())
+    
+    print(PS)
+
 
 
 
