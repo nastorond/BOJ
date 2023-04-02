@@ -1266,6 +1266,18 @@ print(*ans_dic)
 #     if cnt==len(num):out('yes\n')
 #     else:out('no\n')
 
+## 1920 수 찾기
+
+
+
+
+
+
+
+
+
+
+##############벽####################
 # ## 9012 괄호
 # import sys
 # n=int(sys.stdin.readline())

@@ -26,23 +26,23 @@
 
 
 ## C번 어깨동무
-import sys
-input=sys.stdin.readline
-n,k=map(int,input().split())
-h=list(map(int,input().split()))
-li=[0]*101
-for i in range(1,len(h)):
-    if abs(h[i-1]-h[i]):li[abs(h[i-1]-h[i])]+=1
-cnt=0
-while 1:
-    if sum(li)<=k:break
-    else: li[cnt]=0
-    cnt+=1
-
-# cnt=0 시간초과
+# import sys
+# input=sys.stdin.readline
+# n,k=map(int,input().split())
+# h=list(map(int,input().split()))
+# li=[0]*101
+# for i in range(1,len(h)):
+#     if abs(h[i-1]-h[i]):li[abs(h[i-1]-h[i])]+=1
+# cnt=0
 # while 1:
+#     if sum(li)<=k:break
+#     else: li[cnt]=0
 #     cnt+=1
-#     if len(li)>k:li=[i for i in li if i!=cnt]
-#     else:break
 
-sys.stdout.write(str(cnt))
+# # cnt=0 시간초과
+# # while 1:
+# #     cnt+=1
+# #     if len(li)>k:li=[i for i in li if i!=cnt]
+# #     else:break
+
+# sys.stdout.write(str(cnt))
