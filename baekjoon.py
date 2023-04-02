@@ -1267,11 +1267,27 @@ print(*ans_dic)
 #     else:out('no\n')
 
 ## 1920 수 찾기
+import sys
+input=sys.stdin.readline
+out=sys.stdout.write
+n=int(input())
+a=list(map(int,input().split()))
+na=sorted(a)
+m=int(input())
+pro=list(map(int,input().split()))
 
+def binary_search(t,d):
+    start=0;end=len(d)-1
+    while start<=end:
+        mid = (start+end)//2
+        if d[mid]==t:return True
+        elif d[mid]<t: start=mid+1
+        else: end=mid-1
+    return 0
 
-
-
-
+for i in pro:
+    if binary_search(i,na):out('1\n')
+    else:out('0\n')
 
 
 
