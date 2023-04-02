@@ -1236,17 +1236,42 @@ print(*ans_dic)
 # out(str(n//m)+'\n')
 # out(str(n%m))
 
-## 9012 괄호
-import sys
-n=int(sys.stdin.readline())
-for _ in range(n):
-    PS = list(sys.stdin.readline().rstrip())
-    
-    print(PS)
+## 2920 음계
+# import sys
+# out=sys.stdout.write
+# da=list(map(int,sys.stdin.readline().split()))
+# asc=list(range(1,9))
+# des=list(range(8,0,-1))
+# if da==asc:out('ascending')
+# elif da==des:out('descending')
+# else:out('mixed')
 
+## 2475 검증수
+# import sys
+# ck_li=list(map(int,sys.stdin.readline().split()))
+# ans=0
+# for i in ck_li:
+#     ans=ans+i**2
+# sys.stdout.write(str(ans%10))
 
+## 1259 팰린드롬수
+# import sys
+# out=sys.stdout.write
+# while 1:
+#     num=list(map(int,sys.stdin.readline().rstrip()))
+#     cnt=0
+#     if num[0]==0 and len(num)==1:break
+#     for i in range(1,len(num)+1):
+#         if num[i-1]==num[-i]:cnt+=1
+#     if cnt==len(num):out('yes\n')
+#     else:out('no\n')
 
-
+# ## 9012 괄호
+# import sys
+# n=int(sys.stdin.readline())
+# for _ in range(n):
+#     PS = list(sys.stdin.readline().rstrip())
+#     print(PS)
 
 ## 4779 칸토어 집합
 # import sys
