@@ -1289,10 +1289,21 @@ print(*ans_dic)
 #     if binary_search(i,na):out('1\n')
 #     else:out('0\n')
 
+## 1978 소수찾기
+# import sys
+# input=sys.stdin.readline
+# n=int(input())
+# li=list(map(int,input().split()))
+# cnt=0
+# for i in li:
+#     if i==1:cnt+=1
+#     else:
+#         for j in range(2,int(i**0.5)+1):
+#             if i%j==0:cnt+=1;break
+# sys.stdout.write(str(n-cnt))
 
 
-
-##############벽####################
+##############못품####################
 # ## 9012 괄호
 # import sys
 # n=int(sys.stdin.readline())
