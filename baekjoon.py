@@ -1312,6 +1312,32 @@ print(*ans_dic)
 #     li.append(li.popleft())
 # sys.stdout.write(str(li[0]))
 
+## 2609 최대공약수와 최소공배수
+# import sys
+# out=sys.stdout.write
+
+# def gcd(a,b):
+#     while a!=0:
+#         b=b%a
+#         a,b=b,a
+#     return b
+
+# n,m=map(int,sys.stdin.readline().split())
+# g=gcd(n,m)
+# out(str(g)+'\n')
+# out(str(n*m//g))
+
+## 11866 요세푸스 문제0
+import sys
+from collections import deque
+n,k=map(int,sys.stdin.readline().split())
+li=deque(i for i in range(1,n+1))
+ans=deque()
+
+
+
+
+
 ##############못품####################
 # ## 9012 괄호
 # import sys
