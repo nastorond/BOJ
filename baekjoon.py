@@ -1302,6 +1302,15 @@ print(*ans_dic)
 #             if i%j==0:cnt+=1;break
 # sys.stdout.write(str(n-cnt))
 
+## 2164 카드2
+# import sys 
+# from collections import deque ## 같은거라도 데큐가 더 빠름 훨씬
+# n=int(sys.stdin.readline())
+# li=deque(i for i in range(1,n+1))
+# while len(li)>1:
+#     li.popleft()
+#     li.append(li.popleft())
+# sys.stdout.write(str(li[0]))
 
 ##############못품####################
 # ## 9012 괄호
