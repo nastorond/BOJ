@@ -1344,16 +1344,50 @@ print(*ans_dic)
 #         cnt+=1
 # print(*li)
 
-# ## 9012 괄호
-import sys
-from collections import deque
-n=int(sys.stdin.readline())
-for _ in range(n):
-    PS = deque(sys.stdin.readline().rstrip())
-    print(PS)
+## 2743 단어 길이 재기
+# import sys
+# sys.stdout.write(str(len(sys.stdin.readline())-1))
+
+## 9086 문자열
+# import sys
+# input=sys.stdin.readline
+# n=int(input())
+# for i in range(n):
+#     s=input().rstrip()
+#     print("%s%s"%(s[0],s[len(s)-1]))
+
+## 11718 그대로 출력하기
+# while True: ##EOF 파일의 끝에서 입력을 멈춘다
+#     try:print(input())
+#     except:break
+
+## 25083 새싹
+# print("         ,r'\"7")
+# print("r`-_   ,'  ,/")
+# print(" \. \". L_r'")
+# print("   `~\/")
+# print("      |")
+# print("      |")
+
+## 3003 킹, 퀸, 룩, 비숍, 나이트, 폰
+# import sys
+# from collections import deque
+# ans=deque()
+# ans.extend([1,1,2,2,2,8])
+# li=deque(map(int,sys.stdin.readline().split()))
+# for i in range(6):
+#     sys.stdout.write(str(ans.popleft()-li.popleft())+' ')
 
 
 ##############못품####################
+## 9012 괄호
+# import sys
+# from collections import deque
+# n=int(sys.stdin.readline())
+# for _ in range(n):
+#     ps=deque(sys.stdin.readline().rstrip())
+#     ck=deque()
+
 ## 11866 요세푸스 문제0
 # import sys
 # from collections import deque
