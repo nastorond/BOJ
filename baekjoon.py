@@ -1327,24 +1327,39 @@ print(*ans_dic)
 # out(str(g)+'\n')
 # out(str(n*m//g))
 
-## 11866 요세푸스 문제0
+## 10811 바구니 뒤집기
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# n,m=map(int,input().split())
+# li=deque(i for i in range(1,n+1))
+# for _ in range(m):
+#     a,b=map(int,input().split())
+#     sav=deque()
+#     for i in range(a-1,b):sav.append(li[i])
+#     sav.reverse()   
+#     cnt=0
+#     for i in range(a-1,b):
+#         li[i]=sav[cnt]
+#         cnt+=1
+# print(*li)
+
+# ## 9012 괄호
 import sys
 from collections import deque
-n,k=map(int,sys.stdin.readline().split())
-li=deque(i for i in range(1,n+1))
-ans=deque()
-
-
-
+n=int(sys.stdin.readline())
+for _ in range(n):
+    PS = deque(sys.stdin.readline().rstrip())
+    print(PS)
 
 
 ##############못품####################
-# ## 9012 괄호
+## 11866 요세푸스 문제0
 # import sys
-# n=int(sys.stdin.readline())
-# for _ in range(n):
-#     PS = list(sys.stdin.readline().rstrip())
-#     print(PS)
+# from collections import deque
+# n,k=map(int,sys.stdin.readline().split())
+# li=deque(i for i in range(1,n+1))
+# ans=deque()
 
 ## 4779 칸토어 집합
 # import sys
