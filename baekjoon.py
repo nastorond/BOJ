@@ -1378,6 +1378,62 @@ print(*ans_dic)
 # for i in range(6):
 #     sys.stdout.write(str(ans.popleft()-li.popleft())+' ')
 
+## 10845 큐
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# n=int(input())
+# li=deque()
+# for _ in range(n):
+#     s=input().rstrip()
+#     if "push" in s:
+#         num=int(s[5:])
+#         li.append(num)
+#     elif 'pop' in s:
+#         if len(li)<1:out('-1'+'\n')
+#         else:out(str(li.popleft())+'\n')
+#     elif 'size' in s:out(str(len(li))+'\n')
+#     elif 'empty' in s:
+#         if len(li)==0:out('1\n')
+#         else:out('0\n')
+#     elif 'front' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li[0])+'\n')
+#     elif 'back' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li[len(li)-1])+'\n')
+
+## 10866 덱
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# li=deque()
+# n=int(input())
+# for _ in range(n):
+#     s=input().rstrip()
+#     if 'push_back' in s:num=int(s[9:]);li.append(num)
+#     elif 'push_front' in s:num=int(s[10:]);li.appendleft(num)
+#     elif 'pop_front' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li.popleft())+'\n')
+#     elif 'pop_back' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li.pop())+'\n')
+#     elif 'size' in s:out(str(len(li))+'\n')
+#     elif 'empty' in s:
+#         if len(li)==0:out('1\n')
+#         else:out('0\n')
+#     elif 'front' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li[0])+'\n')
+#     elif 'back' in s:
+#         if len(li)<1:out('-1\n')
+#         else:out(str(li[len(li)-1])+'\n')
+        
+
+
 
 ##############못품####################
 ## 9012 괄호
