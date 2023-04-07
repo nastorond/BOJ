@@ -1432,6 +1432,20 @@ print(*ans_dic)
 #         if len(li)<1:out('-1\n')
 #         else:out(str(li[len(li)-1])+'\n')
         
+## 2566 최댓값
+# import sys
+# from collections import deque
+# li=deque()
+# max_li=deque()
+# for i in range(9):
+#     a=list(map(int,sys.stdin.readline().split()))
+#     li.append(a)
+#     max_li.append(max(a))
+# ans_col=max_li.index(max(max_li))
+# sys.stdout.write(str(max(max_li))+'\n')
+# sys.stdout.write(str(ans_col+1)+' '+str(li[ans_col].index(max(max_li))+1))
+
+
 
 
 
