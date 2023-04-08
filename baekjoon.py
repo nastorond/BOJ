@@ -1445,9 +1445,26 @@ print(*ans_dic)
 # sys.stdout.write(str(max(max_li))+'\n')
 # sys.stdout.write(str(ans_col+1)+' '+str(li[ans_col].index(max(max_li))+1))
 
+## 10815 숫자카드
+# import sys
+# input=sys.stdin.readline
 
+# def finf(li,a):
+#     start=0;end=len(li)-1
+#     while start<=end:
+#         mid=(start+end)//2
+#         if li[mid]==a:return 1
+#         elif li[mid]<a:start=mid+1
+#         else:end=mid-1
+#     return 0
 
-
+# n=int(input())
+# li_1=list(map(int,input().split()))
+# m=int(input())
+# li_2=list(map(int,input().split()))
+# li_1.sort()
+# for i in li_2:
+#     sys.stdout.write(str(finf(li_1,i))+' ')
 
 ##############못품####################
 ## 9012 괄호
