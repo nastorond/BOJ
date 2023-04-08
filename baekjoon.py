@@ -1466,14 +1466,22 @@ print(*ans_dic)
 # for i in li_2:
 #     sys.stdout.write(str(finf(li_1,i))+' ')
 
-##############못품####################
 ## 9012 괄호
-# import sys
-# from collections import deque
-# n=int(sys.stdin.readline())
-# for _ in range(n):
-#     ps=deque(sys.stdin.readline().rstrip())
-#     ck=deque()
+import sys
+from collections import deque
+n=int(sys.stdin.readline())
+for _ in range(n):
+    ps=sys.stdin.readline().rstrip()
+    x='()'
+    for i in ps:
+        if x in ps:ps.replace(x,'')
+    print(ps)
+## ahfrpTekd
+
+
+
+##############못품####################
+
 
 ## 11866 요세푸스 문제0
 # import sys
