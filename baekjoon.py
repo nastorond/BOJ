@@ -1466,21 +1466,122 @@ print(*ans_dic)
 # for i in li_2:
 #     sys.stdout.write(str(finf(li_1,i))+' ')
 
-## 9012 괄호
-import sys
-from collections import deque
-n=int(sys.stdin.readline())
-for _ in range(n):
-    ps=sys.stdin.readline().rstrip()
-    x='()'
-    for i in ps:
-        if x in ps:ps.replace(x,'')
-    print(ps)
-## ahfrpTekd
+## 4153 직각삼각형
+# import sys
+# input=sys.stdin.readline
+# while 1:
+#     a,b,c=map(int,input().split())
+#     if a==0 and b==0 and c==0:break
+#     elif max(a,b,c)==c:pass
+#     else:
+#         if max(a,b,c)==a:a,c=c,a
+#         else:b,c=c,b
+#     if c==(a**2+b**2)**0.5:sys.stdout.write('right\n')
+#     else:sys.stdout.write('wrong\n')
 
+## 11050 이항 계수 1
+# import sys
+
+# def fac(n):
+#     ans=1
+#     if n>0:ans=n*fac(n-1)
+#     return ans
+
+# n,k=map(int,sys.stdin.readline().split())
+# sys.stdout.write(str(fac(n)//(fac(k)*fac(n-k))))
+
+## 15439 베라의 패션
+# import sys
+# n=int(sys.stdin.readline())
+# sys.stdout.write(str(n*(n-1)))
+
+## 24723 녹색거탑
+# import sys
+# n=int(sys.stdin.readline())
+# sys.stdout.write(str(2**n))
+
+## 1010 다리놓기
+# import sys
+
+# def fac(n):
+#     ans=1
+#     if n>0:ans=n*fac(n-1)
+#     return ans
+
+# n=int(sys.stdin.readline())
+# for i in range(n):
+#     n,m=map(int,sys.stdin.readline().split())
+#     sys.stdout.write(str(fac(m)//(fac(n)*fac(m-n)))+'\n')
+
+## 9012 괄호
+# import sys
+# from collections import deque
+# out=sys.stdout.write
+# n=int(sys.stdin.readline())
+# for _ in range(n):
+#     ps=deque(sys.stdin.readline().rstrip())
+#     ck=deque()
+#     cnt=0
+#     for i in ps:
+#         if i=='(':ck.append(i)
+#         elif i==')':
+#             if len(ck)==0:cnt+=1;break
+#             else:ck.pop()
+#     if len(ck)>0:out('NO\n')
+#     else:
+#         if cnt:out('NO\n')
+#         else:out("YES\n")
+
+## 2338 긴자리 계산
+# import sys
+# a=int(sys.stdin.readline())
+# b=int(sys.stdin.readline())
+# sys.stdout.write(str(a+b)+'\n')
+# sys.stdout.write(str(a-b)+'\n')
+# sys.stdout.write(str(a*b)+'\n')
 
 
 ##############못품####################
+## 1874 스택 수열
+# import sys
+# from collections import deque
+# n=int(sys.stdin.readline())
+# ans=deque()
+# test=deque()
+# for i in range(n):ans.append(int(sys.stdin.readline()));test.append(i)
+# cnt=0
+# while cnt<=n:
+
+
+
+
+
+
+#     print(2)
+
+## 4949 균형잡힌 세상
+# import sys
+# from collections import deque
+# out=sys.stdout.write
+# while 1:
+#     s=deque(sys.stdin.readline().rstrip())
+#     if s[0]=='.':break
+#     ck1=deque()
+#     ck2=deque()
+#     cnt=0
+#     for i in s:
+#         if i=='(':ck1.append(i)
+#         elif i==')':
+#             if len(ck1)>0:ck1.pop()
+#             else:cnt+=1;break
+#         if i=='[':ck2.append(i)
+#         elif i==']':
+#             if len(ck2)>0:ck2.pop()
+#             else:cnt+=1;break
+#     if len(ck1)>0 or len(ck2)>0:out('no\n')
+#     else:
+#         if cnt:out('no\n')
+#         else:out('yes\n')
 
 
 ## 11866 요세푸스 문제0
