@@ -1540,6 +1540,16 @@ print(*ans_dic)
 # sys.stdout.write(str(a-b)+'\n')
 # sys.stdout.write(str(a*b)+'\n')
 
+## 2558 A+B-2
+# a=int(input())
+# print(a+int(input()))
+
+
+
+
+
+
+
 
 ##############못품####################
 ## 1874 스택 수열
@@ -1551,12 +1561,6 @@ print(*ans_dic)
 # for i in range(n):ans.append(int(sys.stdin.readline()));test.append(i)
 # cnt=0
 # while cnt<=n:
-
-
-
-
-
-
 #     print(2)
 
 ## 4949 균형잡힌 세상
