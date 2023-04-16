@@ -1544,7 +1544,14 @@ print(*ans_dic)
 # a=int(input())
 # print(a+int(input()))
 
-
+## 2744 대소문자 바꾸기
+# import sys
+# s=sys.stdin.readline()
+# ans=''
+# for i in s:
+#     if i.isupper():ans+=i.lower()
+#     else:ans+=i.upper()
+# sys.stdout.write(ans)
 
 
 
