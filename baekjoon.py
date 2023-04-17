@@ -1553,7 +1553,32 @@ print(*ans_dic)
 #     else:ans+=i.upper()
 # sys.stdout.write(ans)
 
+## 4949 균형잡힌 세상
+import sys
+from collections import deque
+out=sys.stdout.write
+while 1:
+    s=deque(sys.stdin.readline().rstrip())
+    if s[0]=='.':break
+    ck1=deque()
+    cnt=0
 
+    for j in s:
+        if j=='(' or j=='[':
+            ck1.append(j)
+        elif j==')' or j==']':
+            if len(ck1)<1:cnt+=1;break
+            elif j==')':
+                if ck1[-1]=='(':ck1.pop()
+                else:cnt+=1;break
+            elif j==']':
+                if ck1[-1]=='[':ck1.pop()
+                else:cnt+=1;break
+
+    if len(ck1)>0:out('no\n')
+    else:
+        if cnt:out('no\n')
+        else:out('yes\n')
 
 
 
@@ -1569,30 +1594,6 @@ print(*ans_dic)
 # cnt=0
 # while cnt<=n:
 #     print(2)
-
-## 4949 균형잡힌 세상
-# import sys
-# from collections import deque
-# out=sys.stdout.write
-# while 1:
-#     s=deque(sys.stdin.readline().rstrip())
-#     if s[0]=='.':break
-#     ck1=deque()
-#     ck2=deque()
-#     cnt=0
-#     for i in s:
-#         if i=='(':ck1.append(i)
-#         elif i==')':
-#             if len(ck1)>0:ck1.pop()
-#             else:cnt+=1;break
-#         if i=='[':ck2.append(i)
-#         elif i==']':
-#             if len(ck2)>0:ck2.pop()
-#             else:cnt+=1;break
-#     if len(ck1)>0 or len(ck2)>0:out('no\n')
-#     else:
-#         if cnt:out('no\n')
-#         else:out('yes\n')
 
 
 ## 11866 요세푸스 문제0
