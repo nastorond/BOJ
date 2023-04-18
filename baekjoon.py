@@ -1554,32 +1554,39 @@ print(*ans_dic)
 # sys.stdout.write(ans)
 
 ## 4949 균형잡힌 세상
-import sys
-from collections import deque
-out=sys.stdout.write
-while 1:
-    s=deque(sys.stdin.readline().rstrip())
-    if s[0]=='.':break
-    ck1=deque()
-    cnt=0
+# import sys
+# from collections import deque
+# out=sys.stdout.write
+# while 1:
+#     s=deque(sys.stdin.readline().rstrip())
+#     if s[0]=='.':break
+#     ck1=deque()
+#     cnt=0
 
-    for j in s:
-        if j=='(' or j=='[':
-            ck1.append(j)
-        elif j==')' or j==']':
-            if len(ck1)<1:cnt+=1;break
-            elif j==')':
-                if ck1[-1]=='(':ck1.pop()
-                else:cnt+=1;break
-            elif j==']':
-                if ck1[-1]=='[':ck1.pop()
-                else:cnt+=1;break
+#     for j in s:
+#         if j=='(' or j=='[':
+#             ck1.append(j)
+#         elif j==')' or j==']':
+#             if len(ck1)<1:cnt+=1;break
+#             elif j==')':
+#                 if ck1[-1]=='(':ck1.pop()
+#                 else:cnt+=1;break
+#             elif j==']':
+#                 if ck1[-1]=='[':ck1.pop()
+#                 else:cnt+=1;break
 
-    if len(ck1)>0:out('no\n')
-    else:
-        if cnt:out('no\n')
-        else:out('yes\n')
+#     if len(ck1)>0:out('no\n')
+#     else:
+#         if cnt:out('no\n')
+#         else:out('yes\n')
 
+## 1312 소수
+# import sys
+# a,b,n=map(int,sys.stdin.readline().split())
+# for i in range(n):
+#     a=(a%b)*10
+#     ans=a//b
+# print(ans)
 
 
 
