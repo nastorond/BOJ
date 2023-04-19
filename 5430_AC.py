@@ -12,12 +12,9 @@ for _ in range(test):
         if i.isnumeric():li.append(i)
     for j in p:
         if j=='R':
-            for _ in range(len(li)):
-                li.appendleft(li.popleft())
-            print(li)
-        if j=='D':
+            li.reverse()
+        elif j=='D':
             if len(li)>1:li.popleft()
-            else:out('error\n')
-    li=list(map(int,li))
-    if len(li)>1:print(li)
-    else:pass
+            else:out('error\n');break
+    if len(li)>1:
+        out('['+','.join(li)+']\n')
