@@ -1588,6 +1588,54 @@ print(*ans_dic)
 #     ans=a//b
 # print(ans)
 
+## 18258 큐 2
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# li=deque()
+# n=int(input())
+# for _ in range(n):
+#     s=input()
+#     if 'push' in s:
+#         num=int(s[5:])
+#         li.append(num)
+#     elif 'pop' in s:
+#         if len(li)>0:out(str(li.popleft())+'\n')
+#         else:out('-1\n')
+#     elif 'size' in s:out(str(len(li))+'\n')
+#     elif 'empty' in s:
+#         if len(li):out('0\n')
+#         else:out('1\n')
+#     elif 'front' in s:
+#         if len(li):out(str(li[0])+'\n')
+#         else:out('-1\n')
+#     elif 'back' in s:
+#         if len(li):out(str(li[-1])+'\n')
+#         else:out('-1\n')
+
+## 11866 요세푸스 문제0
+# import sys
+# from collections import deque
+# n,k=map(int,sys.stdin.readline().split())
+# li=deque(str(i) for i in range(1,n+1))
+# ans=[]
+# for i in range(n):
+#     for j in range(k-1):
+#         li.append(li.popleft())
+#     ans.append(li.popleft())
+# sys.stdout.write('<'+', '.join(ans)+'>\n')
+
+## 1966 프린터 큐
+import sys
+from collections import deque
+input=sys.stdin.readline
+out=sys.stdout.write
+tc=int(input())
+for _ in range(tc):
+    n,m=map(int,input().split())
+    li=deque(map(int,input().split()))
+    
 
 
 ##############못품####################
@@ -1601,14 +1649,6 @@ print(*ans_dic)
 # cnt=0
 # while cnt<=n:
 #     print(2)
-
-
-## 11866 요세푸스 문제0
-# import sys
-# from collections import deque
-# n,k=map(int,sys.stdin.readline().split())
-# li=deque(i for i in range(1,n+1))
-# ans=deque()
 
 ## 4779 칸토어 집합
 # import sys
