@@ -1660,6 +1660,7 @@ for _ in range(tc):
     mx=max(li)
     sav=li[m-1]
     li[m-1]='s'
+    ##qtest
 
     ##
     # if m-1 == 0 : m=len(li)-1 -1 -1 -1
