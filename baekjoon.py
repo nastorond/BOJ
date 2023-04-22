@@ -1627,27 +1627,42 @@ print(*ans_dic)
 # sys.stdout.write('<'+', '.join(ans)+'>\n')
 
 ## 1874 스택 수열
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# n=int(input())
+# res,i,li,fl='',1,deque(),True
+# for _ in range(n):
+#     num=int(input())
+#     while i<=num:
+#         li.append(i)
+#         i+=1
+#         res+='+\n'
+#     if li[-1]==num:
+#         li.pop()
+#         res+='-\n'
+#     else:
+#         fl=False
+# if fl:out(res)
+# else:out("NO")
+
+## 1966 프린터 큐
 import sys
 from collections import deque
 input=sys.stdin.readline
 out=sys.stdout.write
+tc=int(input())
+for _ in range(tc):
+    n,m=map(int,input().split())
+    li=deque(map(int,input().split()))
+    print(sorted(li,reverse=True))
+    mx=max(li)
+    sav=li[m-1]
+    li[m-1]='s'
 
-n=int(input())
-res,i,li,fl='',1,deque(),True
-for _ in range(n):
-    num=int(input())
-    while i<=num:
-        li.append(i)
-        i+=1
-        res+='+\n'
-    if li[-1]==num:
-        li.pop()
-        res+='-\n'
-    else:
-        fl=False
-if fl:out(res)
-else:out("NO")
-
+    ##
+    # if m-1 == 0 : m=len(li)-1 -1 -1 -1
 
 
 
@@ -1676,15 +1691,3 @@ else:out("NO")
 # arr=['\n']*3**n
 # print(khan(arr))
 
-## 1966 프린터 큐
-# import sys
-# from collections import deque
-# input=sys.stdin.readline
-# out=sys.stdout.write
-# tc=int(input())
-# for _ in range(tc):
-#     n,m=map(int,input().split())
-#     li=deque(input().split())
-#     if n==1:
-#         out(li[0]+'\n')
-#     else:
