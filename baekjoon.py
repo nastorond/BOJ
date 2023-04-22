@@ -1647,25 +1647,21 @@ print(*ans_dic)
 # if fl:out(res)
 # else:out("NO")
 
-## 1966 프린터 큐
+## 14425 문자열 집합
 import sys
 from collections import deque
 input=sys.stdin.readline
 out=sys.stdout.write
-tc=int(input())
-for _ in range(tc):
-    n,m=map(int,input().split())
-    li=deque(map(int,input().split()))
-    print(sorted(li,reverse=True))
-    mx=max(li)
-    sav=li[m-1]
-    li[m-1]='s'
-    ##qtest
-
-    ##
-    # if m-1 == 0 : m=len(li)-1 -1 -1 -1
-    ###
-    # array
+n,m=map(int,input().split())
+ans=deque()
+res=0
+for _ in range(n):
+    ans.append(input())
+ans=set(ans)
+for _ in range(m):
+    s=input()
+    if s in ans:res+=1
+out(str(res)+'\n')
 
 
 
@@ -1694,3 +1690,22 @@ for _ in range(tc):
 # arr=['\n']*3**n
 # print(khan(arr))
 
+## 1966 프린터 큐
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# tc=int(input())
+# for _ in range(tc):
+#     n,m=map(int,input().split())
+#     li=deque(map(int,input().split()))
+#     print(sorted(li,reverse=True))
+#     mx=max(li)
+#     sav=li[m-1]
+#     li[m-1]='s'
+#     ##q
+
+#     ##
+#     # if m-1 == 0 : m=len(li)-1 -1 -1 -1
+#     ###
+#     # array
