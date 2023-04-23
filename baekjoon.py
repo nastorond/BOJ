@@ -1675,6 +1675,41 @@ print(*ans_dic)
 #             cnt+=1
 #     sys.stdout.write(str(cnt)+'\n')
 
+## 24416 알고리즘 수업 - 피보나치 수 1
+import sys
+cnt_1=0
+
+# def fib(n):
+#     global cnt_1
+#     ans=1
+#     if n>2:ans=fib(n-1)+fib(n-2)
+#     return ans
+def fib(n):
+    global cnt_1
+    if n<=2:return 1
+    cnt_1+=1 ## 호출의 개념을 모르겠다
+    return fib(n-1)+fib(n-2)
+
+    
+num=int(sys.stdin.readline())
+fib(num)
+print(cnt_1)
+
+# def fibo(n):
+#     ans = 1
+#     if n > 2:
+#         ans = fibo(n-1) + fibo(n-2)
+#     return ans
+
+# def fibo(n):
+#     if n==0: return 0
+#     if n==1: return 1
+#     if n==2: return 1
+#     if dp[n]: return dp[n]
+
+#     dp[n] = fibo(n-1) + fibo(n-2) 
+#     return dp[n]
+
 
 ##############못품####################
 ## 4779 칸토어 집합
