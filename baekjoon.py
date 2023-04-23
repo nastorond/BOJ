@@ -1648,22 +1648,32 @@ print(*ans_dic)
 # else:out("NO")
 
 ## 14425 문자열 집합
-import sys
-from collections import deque
-input=sys.stdin.readline
-out=sys.stdout.write
-n,m=map(int,input().split())
-ans=deque()
-res=0
-for _ in range(n):
-    ans.append(input())
-ans=set(ans)
-for _ in range(m):
-    s=input()
-    if s in ans:res+=1
-out(str(res)+'\n')
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# n,m=map(int,input().split())
+# ans=deque()
+# res=0
+# for _ in range(n):
+#     ans.append(input())
+# ans=set(ans)
+# for _ in range(m):
+#     s=input()
+#     if s in ans:res+=1
+# out(str(res)+'\n')
 
-
+## 1264 모음의 개수
+# import sys
+# while True:
+#     cnt=0
+#     s=sys.stdin.readline()
+#     ans=['a','e','i','o','u','A','E','I','O','U']
+#     if '#' in s:break
+#     for i in s:
+#         if i in ans:
+#             cnt+=1
+#     sys.stdout.write(str(cnt)+'\n')
 
 
 ##############못품####################
@@ -1699,11 +1709,19 @@ out(str(res)+'\n')
 # for _ in range(tc):
 #     n,m=map(int,input().split())
 #     li=deque(map(int,input().split()))
-#     print(sorted(li,reverse=True))
-#     mx=max(li)
-#     sav=li[m-1]
-#     li[m-1]='s'
-#     ##q
+#     idx,mx,cnt,f_len=m,max(li),0,len(li)
+#     fi=li[idx-1]
+#     while mx>=fi:
+#         if li[0]!=mx:
+#             li.append(li.popleft())
+#             cnt+=1
+#             idx-=1
+#         else:
+#             li.popleft()
+#             cnt=0;mx-=1
+#             idx-=1
+#         if idx<0:idx=len(li)
+#     out(str(idx+f_len-len(li))+'\n')
 
 #     ##
 #     # if m-1 == 0 : m=len(li)-1 -1 -1 -1
