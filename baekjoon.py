@@ -1675,40 +1675,32 @@ print(*ans_dic)
 #             cnt+=1
 #     sys.stdout.write(str(cnt)+'\n')
 
-## 24416 알고리즘 수업 - 피보나치 수 1
-import sys
-cnt_1=0
+## 1966 프린터 큐
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# out=sys.stdout.write
+# tc=int(input())
+# for _ in range(tc):
+#     n,m=map(int,input().split())
+#     li=deque(map(int,input().split()))
+#     idx=deque(range(len(li)))
+#     idx[m]='t'
+#     cnt=0
+#     while True:
+#         if li[0]==max(li):
+#             cnt+=1
+#             if idx[0]=='t':
+#                 out(str(cnt)+'\n')
+#                 break
+#             else:
+#                 li.popleft()
+#                 idx.popleft()
+#         else:
+#             li.append(li.popleft())
+#             idx.append(idx.popleft())
 
-# def fib(n):
-#     global cnt_1
-#     ans=1
-#     if n>2:ans=fib(n-1)+fib(n-2)
-#     return ans
-def fib(n):
-    global cnt_1
-    if n<=2:return 1
-    cnt_1+=1 ## 호출의 개념을 모르겠다
-    return fib(n-1)+fib(n-2)
 
-    
-num=int(sys.stdin.readline())
-fib(num)
-print(cnt_1)
-
-# def fibo(n):
-#     ans = 1
-#     if n > 2:
-#         ans = fibo(n-1) + fibo(n-2)
-#     return ans
-
-# def fibo(n):
-#     if n==0: return 0
-#     if n==1: return 1
-#     if n==2: return 1
-#     if dp[n]: return dp[n]
-
-#     dp[n] = fibo(n-1) + fibo(n-2) 
-#     return dp[n]
 
 
 ##############못품####################
@@ -1735,30 +1727,39 @@ print(cnt_1)
 # arr=['\n']*3**n
 # print(khan(arr))
 
-## 1966 프린터 큐
-# import sys
-# from collections import deque
-# input=sys.stdin.readline
-# out=sys.stdout.write
-# tc=int(input())
-# for _ in range(tc):
-#     n,m=map(int,input().split())
-#     li=deque(map(int,input().split()))
-#     idx,mx,cnt,f_len=m,max(li),0,len(li)
-#     fi=li[idx-1]
-#     while mx>=fi:
-#         if li[0]!=mx:
-#             li.append(li.popleft())
-#             cnt+=1
-#             idx-=1
-#         else:
-#             li.popleft()
-#             cnt=0;mx-=1
-#             idx-=1
-#         if idx<0:idx=len(li)
-#     out(str(idx+f_len-len(li))+'\n')
 
-#     ##
-#     # if m-1 == 0 : m=len(li)-1 -1 -1 -1
-#     ###
-#     # array
+
+## 24416 알고리즘 수업 - 피보나치 수 1
+# import sys
+# cnt_1=0
+
+# # def fib(n):
+# #     global cnt_1
+# #     ans=1
+# #     if n>2:ans=fib(n-1)+fib(n-2)
+# #     return ans
+# def fib(n):
+#     global cnt_1
+#     if n<=2:return 1
+#     cnt_1+=1 ## 호출의 개념을 모르겠다
+#     return fib(n-1)+fib(n-2)
+
+    
+# num=int(sys.stdin.readline())
+# fib(num)
+# print(cnt_1)
+
+# # def fibo(n):
+# #     ans = 1
+# #     if n > 2:
+# #         ans = fibo(n-1) + fibo(n-2)
+# #     return ans
+
+# # def fibo(n):
+# #     if n==0: return 0
+# #     if n==1: return 1
+# #     if n==2: return 1
+# #     if dp[n]: return dp[n]
+
+# #     dp[n] = fibo(n-1) + fibo(n-2) 
+# #     return dp[n]
