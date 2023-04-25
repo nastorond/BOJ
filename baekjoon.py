@@ -1700,35 +1700,63 @@ print(*ans_dic)
 #             li.append(li.popleft())
 #             idx.append(idx.popleft())
 
+## 1021 회전하는 큐
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+# n,m=map(int,input().split())
+# li=deque(range(1,n+1))
+# cnt=0
+# for num in list(map(int,input().split())):
+#     if num==li[0]:li.popleft()
+#     else:
+#         idx=li.index(num)
+#         if idx>len(li)//2:
+#             for _ in range(len(li)-idx):
+#                 li.appendleft(li.pop());cnt+=1
+#         else:
+#             for _ in range(idx):
+#                 li.append(li.popleft());cnt+=1
+#         li.popleft()
+# print(cnt)
+
+## 27433 팩토리얼 2
+# def fac(n):
+#     ans=1
+#     if n>0:ans=fac(n-1)*n
+#     return ans
+
+# n=int(input())
+# print(fac(n))
+
+## 4779 칸토어 집합
+import sys
+input=sys.stdin.readline
+out=sys.stdout.write
+
+def khan(n):
+    
+    if n[0]!=n[1]:
+        return n
+    else: 
+        return khan(n)
+
+# n=[]
+# while True: EOF 파일의 끝에서 입력을 멈춘다
+#     try:
+#         a=int(input())
+#         n.append(a)
+#     except EOFError:
+#         break
+n=int(input())
+arr=['-']*3**n
+print(khan(arr))
+
+
 
 
 
 ##############못품####################
-## 4779 칸토어 집합
-# import sys
-# input=sys.stdin.readline
-# out=sys.stdout.write
-
-# def khan(n):
-    
-#     if n[0]!=n[1]:
-#         return n
-#     else: 
-#         return khan(n)
-
-# # n=[]
-# # while True: EOF 파일의 끝에서 입력을 멈춘다
-# #     try:
-# #         a = map(int, input().split())
-# #         n.append(a)
-# #     except EOFError:
-# #         break
-# n=int(input())
-# arr=['\n']*3**n
-# print(khan(arr))
-
-
-
 ## 24416 알고리즘 수업 - 피보나치 수 1
 # import sys
 # cnt_1=0
@@ -1738,6 +1766,7 @@ print(*ans_dic)
 # #     ans=1
 # #     if n>2:ans=fib(n-1)+fib(n-2)
 # #     return ans
+
 # def fib(n):
 #     global cnt_1
 #     if n<=2:return 1
