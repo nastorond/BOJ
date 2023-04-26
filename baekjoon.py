@@ -1729,28 +1729,27 @@ print(*ans_dic)
 # n=int(input())
 # print(fac(n))
 
-## 4779 칸토어 집합
-import sys
-input=sys.stdin.readline
-out=sys.stdout.write
-
-def khan(n):
-    
-    if n[0]!=n[1]:
-        return n
-    else: 
-        return khan(n)
-
-# n=[]
-# while True: EOF 파일의 끝에서 입력을 멈춘다
-#     try:
-#         a=int(input())
-#         n.append(a)
-#     except EOFError:
+## 2083 럭비 클럽
+# import sys
+# input=sys.stdin.readline
+# while 1:
+#     s=input().rstrip()
+#     ans,num='',''
+#     cnt=0
+#     if '#' in s:
 #         break
-n=int(input())
-arr=['-']*3**n
-print(khan(arr))
+#     else:
+#         for i in s:
+#             if i == ' ':
+#                 cnt+=1
+#             if cnt==0:ans+=i
+#             else:num+=i
+#         age,weight=map(int,num.split())
+#         if age>17 or weight>=80:ans+=' Senior\n'
+#         else:ans+=' Junior\n'
+#         sys.stdout.write(ans)
+
+
 
 
 
@@ -1792,3 +1791,26 @@ print(khan(arr))
 
 # #     dp[n] = fibo(n-1) + fibo(n-2) 
 # #     return dp[n]
+
+## 4779 칸토어 집합
+# import sys
+# input=sys.stdin.readline
+# out=sys.stdout.write
+
+# def khan(n):
+    
+#     if n[0]!=n[1]:
+#         return n
+#     else: 
+#         return khan(n)
+
+# # n=[]
+# # while True: EOF 파일의 끝에서 입력을 멈춘다
+# #     try:
+# #         a=int(input())
+# #         n.append(a)
+# #     except EOFError:
+# #         break
+# n=int(input())
+# arr=['-']*3**n
+# print(khan(arr))
