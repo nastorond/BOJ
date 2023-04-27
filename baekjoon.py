@@ -1749,9 +1749,17 @@ print(*ans_dic)
 #         else:ans+=' Junior\n'
 #         sys.stdout.write(ans)
 
-
-
-
+## 구간 합 구하기 4
+# import sys
+# input=sys.stdin.readline
+# n,m=map(int,input().split())
+# li=list(map(int,input().split()))
+# ps_li=[0]*(n+1)
+# for i in range(n):
+#     ps_li[i+1]=ps_li[i]+li[i]
+# for _ in range(m):
+#     i,j=map(int,input().split())
+#     print(ps_li[j]-ps_li[i-1])
 
 
 
