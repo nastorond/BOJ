@@ -1791,8 +1791,20 @@ print(*ans_dic)
 # b=abs(y-h)
 # print(min(a,b,x,y))
 
+## 18511 큰 수 구성하기
+n,k=map(int,input().split())
+k_li=list(map(int,input().split()))
+res=0
 
+def func(idx,total,t):
+    global res
+    if total > n:return
+    if res<total:res=total
+    for i in range(k):
+        func(i,total+(k_li[i]*t),t*10)
 
+func(0,0,1)
+print(res)
 
 
 
