@@ -1792,23 +1792,31 @@ print(*ans_dic)
 # print(min(a,b,x,y))
 
 ## 18511 큰 수 구성하기
-n,k=map(int,input().split())
-k_li=list(map(int,input().split()))
-res=0
+# n,k=map(int,input().split())
+# k_li=list(map(int,input().split()))
+# res=0
 
-def func(idx,total,t):
-    global res
-    if total > n:return
-    if res<total:res=total
-    for i in range(k):
-        func(i,total+(k_li[i]*t),t*10)
+# def func(idx,total,t):
+#     global res
+#     if total > n:return
+#     if res<total:res=total
+#     for i in range(k):
+#         func(i,total+(k_li[i]*t),t*10)
 
-func(0,0,1)
-print(res)
+# func(0,0,1)
+# print(res)
 
-
-
-
+## 5956 Symmetery
+n,m=map(int,input().split())
+ans,cnt=0,0
+while 1:
+    if n%2==0 or m%2==0:
+        break
+    n=(n-1)//2
+    m=(m-1)//2
+    ans+=4**cnt
+    cnt+=1
+print(ans)
 
 
 
