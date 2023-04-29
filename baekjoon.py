@@ -1807,16 +1807,42 @@ print(*ans_dic)
 # print(res)
 
 ## 5956 Symmetery
-n,m=map(int,input().split())
-ans,cnt=0,0
-while 1:
-    if n%2==0 or m%2==0:
-        break
-    n=(n-1)//2
-    m=(m-1)//2
-    ans+=4**cnt
-    cnt+=1
-print(ans)
+# n,m=map(int,input().split())
+# ans,cnt=0,0
+# while 1:
+#     if n%2==0 or m%2==0:
+#         break
+#     n=(n-1)//2
+#     m=(m-1)//2
+#     ans+=4**cnt
+#     cnt+=1
+# print(ans)
+
+## 24479 알고리즘 수업 - 깊이 우선 탐색 1
+import sys
+sys.setrecursionlimit(10 ** 6)
+input=sys.stdin.readline
+n,m,r=map(int,input().split())
+gp=[[] for _ in range(n+1)]
+vt=[0]*(n+1)
+cnt=1
+
+def dfs(gp,e,vt):
+    global cnt
+    vt[e]=cnt
+    for i in gp[e]:
+        if vt[i]==0:
+            cnt+=1
+            dfs(gp,i,vt)
+
+for _ in range(m):
+    i,j=map(int,input().split())
+    gp[i].append(j)
+    gp[j].append(i)
+for i in range(n):gp[i].sort()
+dfs(gp,r,vt)
+for i in range(1,n+1):print(vt[i])
+
 
 
 
