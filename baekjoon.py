@@ -1844,11 +1844,14 @@ print(*ans_dic)
 # for i in range(1,n+1):print(vt[i])
 
 ## 2752 세수 정렬
-from collections import deque
-li=deque(map(int,input().split()))
-print(*sorted(li))
+# from collections import deque
+# li=deque(map(int,input().split()))
+# print(*sorted(li))
 
-
+## 5524 입실 관리
+# import sys
+# input=sys.stdin.readline
+# for _ in range(int(input())):sys.stdout.write(input().lower())
 
 
 
