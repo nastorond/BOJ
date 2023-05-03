@@ -1854,11 +1854,11 @@ print(*ans_dic)
 # for _ in range(int(input())):sys.stdout.write(input().lower())
 
 ## 5717 상근이의 친구들
-import sys
-while True:
-    m,f=map(int,sys.stdin.readline().split())
-    if m==0:break
-    else:print(m+f)
+# import sys
+# while True:
+#     m,f=map(int,sys.stdin.readline().split())
+#     if m==0:break
+#     else:print(m+f)
 
 
 
