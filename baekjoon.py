@@ -1860,7 +1860,30 @@ print(*ans_dic)
 #     if m==0:break
 #     else:print(m+f)
 
+## 24480 알고리즘 - 깊이 우선 탐색 2
+# import sys
+# sys.setrecursionlimit(10**6)
+# input=sys.stdin.readline
 
+# def dfs(gp, v, vt):
+#     global cnt
+#     cnt+=1
+#     vt[v]=cnt
+#     for i in gp[v]:
+#         if vt[i]==0:
+#             dfs(gp,i,vt)
+
+# n,m,r=map(int,input().split())
+# cnt=0
+# vt=[0]*(n+1)
+# gp=[[] for _ in range(n+1)]
+# for _ in range(m):
+#     u,v=map(int,input().split())
+#     gp[u].append(v)
+#     gp[v].append(u)
+# for i in range(1,n+1):gp[i].sort(reverse=True)
+# dfs(gp,r,vt)
+# for i in range(1,n+1):print(vt[i])
 
 
 ##############못품####################
