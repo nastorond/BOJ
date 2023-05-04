@@ -1885,6 +1885,17 @@ print(*ans_dic)
 # dfs(gp,r,vt)
 # for i in range(1,n+1):print(vt[i])
 
+## 4470 줄번호
+import sys
+input=sys.stdin.readline
+for i in range(int(input())):
+    s=input()
+    sys.stdout.write(str(i+1)+'. '+s)
+
+
+
+
+
 
 ##############못품####################
 ## 24416 알고리즘 수업 - 피보나치 수 1
