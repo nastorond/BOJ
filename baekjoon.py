@@ -1886,15 +1886,40 @@ print(*ans_dic)
 # for i in range(1,n+1):print(vt[i])
 
 ## 4470 줄번호
+# import sys
+# input=sys.stdin.readline
+# for i in range(int(input())):
+#     s=input()
+#     sys.stdout.write(str(i+1)+'. '+s)
+
+## 24444 알고리즘 수업 - 너비 우선 탐색 1
 import sys
+from collections import deque
+sys.setrecursionlimit(10**6)
+
+def bfs(gp,r,vt):
+    q=deque([r])
+    vt[r]=1
+    cnt=2
+    while q:
+        r=q.popleft()
+        for i in gp[r]:
+            if vt[i]==0:
+                q.append(i)
+                vt[i]=cnt
+                cnt+=1
+
 input=sys.stdin.readline
-for i in range(int(input())):
-    s=input()
-    sys.stdout.write(str(i+1)+'. '+s)
-
-
-
-
+n,m,r=map(int, input().split())
+gp=[[] for _ in range(n+1)]
+vt=[0]*(n+1)
+for i in range(m):
+    u,v=map(int,input().split())
+    gp[u].append(v)
+    gp[v].append(u)
+for i in range(1,n+1):gp[i].sort()
+bfs(gp,r,vt)
+for i in vt[1:]:print(i)
 
 
 ##############못품####################
