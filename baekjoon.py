@@ -1893,34 +1893,88 @@ print(*ans_dic)
 #     sys.stdout.write(str(i+1)+'. '+s)
 
 ## 24444 알고리즘 수업 - 너비 우선 탐색 1
+# import sys
+# from collections import deque
+# sys.setrecursionlimit(10**6)
+
+# def bfs(gp,r,vt):
+#     q=deque([r])
+#     vt[r]=1
+#     cnt=2
+#     while q:
+#         r=q.popleft()
+#         for i in gp[r]:
+#             if vt[i]==0:
+#                 q.append(i)
+#                 vt[i]=cnt
+#                 cnt+=1
+
+# input=sys.stdin.readline
+# n,m,r=map(int, input().split())
+# gp=[[] for _ in range(n+1)]
+# vt=[0]*(n+1)
+# for i in range(m):
+#     u,v=map(int,input().split())
+#     gp[u].append(v)
+#     gp[v].append(u)
+# for i in range(1,n+1):gp[i].sort()
+# bfs(gp,r,vt)
+# for i in vt[1:]:print(i)
+
+## 24445 알고리즘 수업 - 너비 우선 탐색 2
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+
+# def bfs(gp,r,vt):
+#     q=deque([r])
+#     vt[r]=1
+#     cnt=1
+#     while q:
+#         r=q.popleft()
+#         gp[r].sort(reverse=True)
+#         for i in gp[r]:
+#             if vt[i]==0:
+#                 q.append(i)
+#                 cnt+=1
+#                 vt[i]=cnt
+
+# n,m,r=map(int,input().split())
+# gp=[[] for _ in range(n+1)]
+# vt=[0]*(n+1)
+# for i in range(m):
+#     u,v=map(int,input().split())
+#     gp[u].append(v)
+#     gp[v].append(u)
+# bfs(gp,r,vt)
+# for i in vt[1:]:print(i)
+
+## 2606 바이러스
 import sys
 from collections import deque
-sys.setrecursionlimit(10**6)
+input=sys.stdin.readline
 
-def bfs(gp,r,vt):
+n=int(input())
+m=int(input())
+gp=[[] for _ in range(n+1)]
+vt=[0]*(n+1)
+for _ in range(m):
+    u,v=map(int,input().split())
+    gp[u].append(v)
+    gp[v].append(u)
+
+def bfs(r):
     q=deque([r])
     vt[r]=1
-    cnt=2
     while q:
         r=q.popleft()
         for i in gp[r]:
             if vt[i]==0:
                 q.append(i)
-                vt[i]=cnt
-                cnt+=1
+                vt[r]+=1
 
-input=sys.stdin.readline
-n,m,r=map(int, input().split())
-gp=[[] for _ in range(n+1)]
-vt=[0]*(n+1)
-for i in range(m):
-    u,v=map(int,input().split())
-    gp[u].append(v)
-    gp[v].append(u)
-for i in range(1,n+1):gp[i].sort()
-bfs(gp,r,vt)
-for i in vt[1:]:print(i)
-
+bfs(4)
+print(vt)
 
 ##############못품####################
 ## 24416 알고리즘 수업 - 피보나치 수 1
