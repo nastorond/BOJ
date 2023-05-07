@@ -1949,32 +1949,9 @@ print(*ans_dic)
 # bfs(gp,r,vt)
 # for i in vt[1:]:print(i)
 
-## 2606 바이러스
-import sys
-from collections import deque
-input=sys.stdin.readline
-
-n=int(input())
-m=int(input())
-gp=[[] for _ in range(n+1)]
-vt=[0]*(n+1)
-for _ in range(m):
-    u,v=map(int,input().split())
-    gp[u].append(v)
-    gp[v].append(u)
-
-def bfs(r):
-    q=deque([r])
-    vt[r]=1
-    while q:
-        r=q.popleft()
-        for i in gp[r]:
-            if vt[i]==0:
-                q.append(i)
-                vt[r]+=1
-
-bfs(4)
-print(vt)
+## 25628 햄버거 만들기
+a,b=map(int,input().split())
+print(min(a//2,b))
 
 ##############못품####################
 ## 24416 알고리즘 수업 - 피보나치 수 1
@@ -2052,3 +2029,31 @@ print(vt)
 #     dp=[0]*(n+1)
 #     fibo(n)
 #     print(cnt_0,cnt_1)
+
+
+## 2606 바이러스
+# import sys
+# from collections import deque
+# input=sys.stdin.readline
+
+# n=int(input())
+# m=int(input())
+# gp=[[] for _ in range(n+1)]
+# vt=[0]*(n+1)
+# for _ in range(m):
+#     u,v=map(int,input().split())
+#     gp[u].append(v)
+#     gp[v].append(u)
+
+# def bfs(r):
+#     q=deque([r])
+#     vt[r]=1
+#     while q:
+#         r=q.popleft()
+#         for i in gp[r]:
+#             if vt[i]==0:
+#                 q.append(i)
+#                 vt[r]+=1
+
+# bfs(4)
+# print(vt)
