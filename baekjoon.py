@@ -1973,6 +1973,22 @@ print(*ans_dic)
 # a,b=map(int,input().split())
 # print((a+b)*(a-b))
 
+## 1676 팩토리얼 0의 개수
+def fac(n):
+    ans=1
+    if n>0:ans=n*fac(n-1)
+    return ans
+
+n=int(input())
+n=str(fac(n))
+cnt=0
+for i in range(-1,-len(n)-1,-1):
+    if n[i]=='0':
+        cnt+=1
+    else:
+        break
+print(cnt)
+
 
 
 ##############못품####################
