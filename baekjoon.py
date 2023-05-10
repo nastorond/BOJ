@@ -1954,15 +1954,26 @@ print(*ans_dic)
 # print(min(a//2,b))
 
 ## 1769 3의 배수
-cnt=0
-x=list(map(int,input()))
-while 1:
-    if len(x)>1:
-        cnt+=1
-        x=list(map(int,str(sum(x))))
-    else:
-        if sum(x)%3==0:print(str(cnt)+'\nYES');break
-        else:print(str(cnt)+'\nNO');break
+# cnt=0
+# x=list(map(int,input()))
+# while 1:
+#     if len(x)>1:
+#         cnt+=1
+#         x=list(map(int,str(sum(x))))
+#     else:
+#         if sum(x)%3==0:print(str(cnt)+'\nYES');break
+#         else:print(str(cnt)+'\nNO');break
+
+## 10699 오늘 날짜
+# import datetime
+# x=str(datetime.datetime.now())
+# print(x[:10])
+
+## 15964 이상한 기호
+# a,b=map(int,input().split())
+# print((a+b)*(a-b))
+
+
 
 ##############못품####################
 ## 24416 알고리즘 수업 - 피보나치 수 1
