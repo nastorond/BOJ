@@ -1974,20 +1974,37 @@ print(*ans_dic)
 # print((a+b)*(a-b))
 
 ## 1676 팩토리얼 0의 개수
-def fac(n):
-    ans=1
-    if n>0:ans=n*fac(n-1)
-    return ans
+# def fac(n):
+#     ans=1
+#     if n>0:ans=n*fac(n-1)
+#     return ans
 
+# n=int(input())
+# n=str(fac(n))
+# cnt=0
+# for i in range(-1,-len(n)-1,-1):
+#     if n[i]=='0':
+#         cnt+=1
+#     else:
+#         break
+# print(cnt)
+
+## 15829 Hashing
+import sys
+input=sys.stdin.readline
+dc={'a':1, 'b':2, 'c':3, 'd':4, 'e':5, 'f':6, 'g':7, 'h':8, 'i':9, 
+    'j':10, 'k':11, 'l':12, 'm':13, 'n':14, 'o':15, 'p':16, 'q':17,
+    'r':18, 's':19, 't':20, 'u':21, 'v':22, 'w':23, 'x':24, 'y':25, 'z':26}
 n=int(input())
-n=str(fac(n))
-cnt=0
-for i in range(-1,-len(n)-1,-1):
-    if n[i]=='0':
-        cnt+=1
-    else:
-        break
-print(cnt)
+s=input().rstrip()
+res=0
+for i in range(len(s)):
+    res+=dc[s[i]]*(31**i)
+print(res%1234567891)
+
+
+
+
 
 
 
