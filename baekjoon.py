@@ -2003,14 +2003,21 @@ print(*ans_dic)
 # print(res%1234567891)
 
 ## 10039 평균 점수
-res=0
-for i in range(5):
-    n=int(input())
-    if n<40:n=40
-    res+=n
-print(res//5)
+# res=0
+# for i in range(5):
+#     n=int(input())
+#     if n<40:n=40
+#     res+=n
+# print(res//5)
 
-
+## 5532 방학숙제
+# import math
+# l=int(input())
+# a=int(input())
+# b=int(input())
+# c=int(input())
+# d=int(input())
+# print(l-max(math.ceil(a/c),math.ceil(b/d)))
 
 
 
