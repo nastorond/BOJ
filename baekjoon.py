@@ -2020,18 +2020,28 @@ print(*ans_dic)
 # print(l-max(math.ceil(a/c),math.ceil(b/d)))
 
 ## 1475 방번호
-ck=[0]*10
-li=list(map(int,input().rstrip()))
-for k in li:
-    if k==6 or k==9:
-        if ck[6]==ck[9]:ck[6]+=1
-        else:
-            ck[9]+=1
-    else:ck[k]+=1
-print(max(ck))
+# ck=[0]*10
+# li=list(map(int,input().rstrip()))
+# for k in li:
+#     if k==6 or k==9:
+#         if ck[6]==ck[9]:ck[6]+=1
+#         else:
+#             ck[9]+=1
+#     else:ck[k]+=1
+# print(max(ck))
+
+## 28113 정보섬의 대중교통
+n,a,b=map(int,input().split())
+if a<b:print('Bus')
+if a>b:print("Subway")
+if a==b:print("Anything")
+
 
 
 ##############못품####################
+## 15649 N과 M (1)
+# n,m=map(int,input().split())
+
 ## 24416 알고리즘 수업 - 피보나치 수 1
 # import sys
 # cnt_1=0
