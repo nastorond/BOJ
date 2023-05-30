@@ -2031,10 +2031,18 @@ print(*ans_dic)
 # print(max(ck))
 
 ## 28113 정보섬의 대중교통
-n,a,b=map(int,input().split())
-if a<b:print('Bus')
-if a>b:print("Subway")
-if a==b:print("Anything")
+# n,a,b=map(int,input().split())
+# if a<b:print('Bus')
+# if a>b:print("Subway")
+# if a==b:print("Anything")
+
+## 28097 모범생 포닉스
+n=int(input())
+t=0
+for i in list(map(int,input().split())):
+    t+=i
+t+=8*(n-1)
+print("%d %d" %(t//24, t%24))
 
 
 
