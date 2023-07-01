@@ -2037,12 +2037,12 @@ print(*ans_dic)
 # if a==b:print("Anything")
 
 ## 28097 모범생 포닉스
-n=int(input())
-t=0
-for i in list(map(int,input().split())):
-    t+=i
-t+=8*(n-1)
-print("%d %d" %(t//24, t%24))
+# n=int(input())
+# t=0
+# for i in list(map(int,input().split())):
+#     t+=i
+# t+=8*(n-1)
+# print("%d %d" %(t//24, t%24))
 
 
 
