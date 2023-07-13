@@ -17,4 +17,4 @@ for _ in range(n):
     
     # for i in it.permutations(p):
     #     print(*list(i))
-    print(list(it.permutations(p)))
+    print(list(it.permutations(p))) ## 모든 경우의수 뽑아줌
