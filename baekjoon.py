@@ -2068,8 +2068,9 @@ print(*ans_dic)
 
 # def fib(n):
 #     global cnt_1
-#     if n<=2:return 1
-#     cnt_1+=1 ## 호출의 개념을 모르겠다
+#     if n<=2:
+#         return 1
+#     cnt_1+=1
 #     return fib(n-1)+fib(n-2)
 
     
@@ -2091,6 +2092,7 @@ print(*ans_dic)
 
 # #     dp[n] = fibo(n-1) + fibo(n-2) 
 # #     return dp[n]
+
 
 ## 4779 칸토어 집합
 # import sys
