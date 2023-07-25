@@ -2044,19 +2044,7 @@ print(*ans_dic)
 # t+=8*(n-1)
 # print("%d %d" %(t//24, t%24))
 
-
-
-
-
-
-
-
-
-##############못품####################
-## 15649 N과 M (1)
-# n,m=map(int,input().split())
-
-## 24416 알고리즘 수업 - 피보나치 수 1
+## 24416 알고리즘수업 - 피보나치 수 1
 # import sys
 # cnt_1=0
 
@@ -2092,6 +2080,31 @@ print(*ans_dic)
 
 # #     dp[n] = fibo(n-1) + fibo(n-2) 
 # #     return dp[n]
+
+## 아래가 된거
+# def fibo(n):
+#     dp = [0]*(n+1)
+#     dp[0],dp[1],dp[2] = 0, 1, 1
+#     for i in range(3,n+1):
+#         dp[i] = dp[i-1] + dp[i-2]
+#     return dp[n]
+
+# n = int(input())
+# ans1 = fibo(n)
+# print(ans1, n-2)
+
+
+
+
+
+
+
+
+##############못품####################
+## 15649 N과 M (1)
+# n,m=map(int,input().split())
+
+
 
 
 ## 4779 칸토어 집합
