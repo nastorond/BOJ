@@ -2093,19 +2093,33 @@ print(*ans_dic)
 # ans1 = fibo(n)
 # print(ans1, n-2)
 
+## 27160 할리갈리
+# import sys
+# input = sys.stdin.readline
+# n = int(input())
+# di = dict()
+# for i in range(n):
+#     k, v = input().split()
+#     v = int(v)
+#     di.setdefault(k,0)
+#     di[k] += v
 
+# if 5 in di.values():
+#     print('YES')
+# else:
+#     print('NO')
 
-
-
-
-
+## 피보나치 수 2
+n = int(input())
+dp = [0]*(n+1)
+dp[1] = 1
+for i in range(2, n+1):
+    dp[i] = dp[i-1] + dp[i-2]
+print(dp[n])
 
 ##############못품####################
 ## 15649 N과 M (1)
 # n,m=map(int,input().split())
-
-
-
 
 ## 4779 칸토어 집합
 # import sys
