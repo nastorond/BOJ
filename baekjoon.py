@@ -2117,6 +2117,46 @@ print(*ans_dic)
 #     dp[i] = dp[i-1] + dp[i-2]
 # print(dp[n])
 
+## 13300 방 배정
+# import sys
+# input = sys.stdin.readline
+
+# n,k = map(int, input().split())
+# li = [[0,0] for _ in range(n+1)]
+# res = 0
+
+# for i in range(n):
+#     s, y = map(int, input().split())
+#     li[y][s] += 1
+
+# for i in li:
+#     if i[0]//k:
+#         res += (i[0]//k) + 1
+#     else:
+#         res += i[0]//k
+#     if i[1]//k:
+#         res += (i[1]//k) + 1
+#     else:
+#         res += i[1]//k
+
+# print(res)
+
+cnt=0
+x=list(map(int,input()))
+while 1:
+    if len(x)>1:cnt+=1;x=list(map(int,str(sum(x))))
+    else:
+        if sum(x)%3==0:print(str(cnt)+'\nYES');break
+        else:print(str(cnt)+'\nNO');break
+
+
+
+
+
+
+
+
+
 
 
 
