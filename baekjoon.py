@@ -2141,25 +2141,15 @@ print(*ans_dic)
 
 # print(res)
 
-cnt=0
-x=list(map(int,input()))
+## 4101 크냐?
 while 1:
-    if len(x)>1:cnt+=1;x=list(map(int,str(sum(x))))
+    n1, n2 = map(int, input().split())
+    if n1 == 0 and n2 == 0:
+        break
+    elif n1 > n2:
+        print('Yes')
     else:
-        if sum(x)%3==0:print(str(cnt)+'\nYES');break
-        else:print(str(cnt)+'\nNO');break
-
-
-
-
-
-
-
-
-
-
-
-
+        print('No')
 
 ##############못품####################
 ## 15649 N과 M (1)
