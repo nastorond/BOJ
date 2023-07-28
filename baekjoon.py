@@ -2142,14 +2142,17 @@ print(*ans_dic)
 # print(res)
 
 ## 4101 크냐?
-while 1:
-    n1, n2 = map(int, input().split())
-    if n1 == 0 and n2 == 0:
-        break
-    elif n1 > n2:
-        print('Yes')
-    else:
-        print('No')
+# while 1:
+#     n1, n2 = map(int, input().split())
+#     if n1 == 0 and n2 == 0:
+#         break
+#     elif n1 > n2:
+#         print('Yes')
+#     else:
+#         print('No')
+
+
+
 
 ##############못품####################
 ## 15649 N과 M (1)
