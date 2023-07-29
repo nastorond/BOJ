@@ -2151,6 +2151,21 @@ print(*ans_dic)
 #     else:
 #         print('No')
 
+## 1371 가장 많은 글자
+# import sys
+# input = sys.stdin.read
+# s = input().replace("\n","").replace(" ","")
+# ans = [0]*29
+# for i in s:
+#     ans[ord(i)-97] += 1
+# res = []
+# mx = max(ans)
+# for i in range(len(ans)):
+#     if mx == ans[i]:
+#         res.append(chr(i+97))
+# print(''.join(res))
+
+
 
 
 
@@ -2180,48 +2195,3 @@ print(*ans_dic)
 # n=int(input())
 # arr=['-']*3**n
 # print(khan(arr))
-
-## 1003 피보나치 함수
-# def fibo(n):
-#     global cnt_0,cnt_1,dp
-#     if n==0:cnt_0+=1;return 0
-#     elif n==1:cnt_1+=1;return 1
-#     elif dp[n]: return dp[n]
-#     dp[n]=fibo(n-1)+fibo(n-2)
-#     return dp[n]
-
-# t=int(input())
-# for _ in range(t):
-#     n=int(input())
-#     cnt_0,cnt_1=0,0
-#     dp=[0]*(n+1)
-#     fibo(n)
-#     print(cnt_0,cnt_1)
-
-
-## 2606 바이러스
-# import sys
-# from collections import deque
-# input=sys.stdin.readline
-
-# n=int(input())
-# m=int(input())
-# gp=[[] for _ in range(n+1)]
-# vt=[0]*(n+1)
-# for _ in range(m):
-#     u,v=map(int,input().split())
-#     gp[u].append(v)
-#     gp[v].append(u)
-
-# def bfs(r):
-#     q=deque([r])
-#     vt[r]=1
-#     while q:
-#         r=q.popleft()
-#         for i in gp[r]:
-#             if vt[i]==0:
-#                 q.append(i)
-#                 vt[r]+=1
-
-# bfs(4)
-# print(vt)
