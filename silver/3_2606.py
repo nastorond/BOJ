@@ -17,6 +17,7 @@ def bfs(gp, v, visited):
                 visited[i] = True
     return ckpt
 
+
 input = sys.stdin.readline
 n = int(input())
 m = int(input())
