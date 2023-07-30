@@ -2,21 +2,15 @@ import sys
 from collections import deque
 
 input = sys.stdin.readline
-st = input().rstrip()
-li = deque(st)
+s = input().rstrip()
 bom = input().rstrip()
-sav = ''
+sav = []
 
-while li:
-    s = li.pop()
-    s += sav
-    sav = s
+for alp in s:
+    sav.append(alp)
+    if alp == bom[-1] and ''.join(sav[-len(bom):]) == bom:
+        del sav[-len(bom):]
 
-    if bom == sav[:len(bom)]:
-        sav = sav.replace(bom, '', 1)
-        li.extend(list(sav))
-        sav = ''
-        
 if len(sav):
     print("".join(sav))
 else:
