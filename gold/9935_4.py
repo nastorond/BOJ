@@ -1,21 +1,23 @@
 import sys
 from collections import deque
+
 input = sys.stdin.readline
-li = deque(input().rstrip())
+st = input().rstrip()
+li = deque(st)
 bom = input().rstrip()
 sav = ''
-while True:
-    try:
-        s = li.pop()
-        sav += s
+
+while li:
+    s = li.pop()
+    s += sav
+    sav = s
+
+    if bom == sav[:len(bom)]:
+        sav = sav.replace(bom, '', 1)
+        li.extend(list(sav))
+        sav = ''
         
-        if not len(li):
-            if len(bom):
-                li.extend(bom)
-        
-    except:
-        if len(li):
-            print("".join(li))
-        else:
-            print('FRULA')
-        break
+if len(sav):
+    print("".join(sav))
+else:
+    print('FRULA')
