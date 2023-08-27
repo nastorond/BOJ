@@ -39,7 +39,7 @@ for x, y in stores:
             if x == 1:
                 res += y + now_loc[1]
             elif x == 2:
-                res += (col - y) + now_loc[1]
+                res += y + col - now_loc[1]
 
         elif now_loc[0] == 4:
             if x == 2:
