@@ -21,8 +21,6 @@ bool compare(tuple<int, int, int> a, tuple<int, int, int> b) {
 int solution(vector<vector<int>> data, int col, int row_begin, int row_end) {
     int answer = 0;
     
-    // 새롭게 정렬된 벡터
-    vector<vector<int>> sorted_data;
     // 정렬 기준으로 삼을 데이터
     vector<tuple<int, int, int>> standard_for_sort;
     // S_i 값들을 저장할 데이터
