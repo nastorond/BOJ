@@ -1,33 +1,42 @@
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& mat) {
-        int i, j, cnt1, cnt2, res=0;
-        int row=mat.size(), col=mat[0].size();
-        if (row == 0) return 0;
-        vector<vector<int>> arr(row, vector<int>(col));
+        if (mat.empty()) return 0;
 
-        for (i=0; i<row; i++) arr[i][0] = mat[i][0] - '0';
+        int row = mat.size();
+        int col = mat[0].size();
+        vector<int> heights(col, 0);
+        int maxArea = 0;
 
-        for (i=0; i<col; i++) arr[0][i] = mat[0][i] - '0';
-
-        for (i=1; i<row; i++) {
-            for (j=1; j<col; j++) {
-                if (mat[i][j] == '1') arr[i][j] = min({arr[i][j-1], arr[i-1][j], arr[i-1][j-1]}) + 1;
-            }
-        }
-
-        for (i=0; i<row; i++) {
-            for (j=0; j<col; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 if (mat[i][j] == '1') {
-                    cnt1 = arr[i][j] * arr[i][j];
-                    cnt2 = arr[i][j] * arr[i][j];
-                    for (int k=i+1; k<row && arr[i][j] <= arr[k][j] && arr[k][j]; k++) cnt1 += arr[i][j];
-                    for (int l=j+1; l<col && arr[i][j] <= arr[i][l] && arr[i][l]; l++) cnt2 += arr[i][j];
-                    res = max({cnt1, cnt2, res});
+                    heights[j]++;
+                } else {
+                    heights[j] = 0;
                 }
             }
+            maxArea = max(maxArea, largestRectangleArea(heights));
         }
+        return maxArea;
+    }
 
-        return res;
+private:
+    int largestRectangleArea(vector<int>& heights) {
+        stack<int> st;
+        heights.push_back(0);
+        int maxArea = 0;
+
+        for (int i = 0; i < heights.size(); i++) {
+            while (!st.empty() && heights[i] < heights[st.top()]) {
+                int h = heights[st.top()];
+                st.pop();
+                int w = st.empty() ? i : i - st.top() - 1;
+                maxArea = max(maxArea, h * w);
+            }
+            st.push(i);
+        }
+        heights.pop_back();
+        return maxArea;
     }
 };
