@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -10,11 +9,7 @@ unordered_map<string, vector<pair<string, bool>>> travel;
 vector<string> answer;
 int cnt;
 
-void dfs(string cur_loc, vector<string> &trip, int cur_cnt) {
-    // for (auto it=trip.begin(); it!=trip.end(); it++) {
-    //     cout << *it << " ";
-    // }
-    // cout << "\n";
+void dfs(string cur_loc, vector<string> &trip) {
     if (answer.size() > 1) return ;
     if (trip.size() == cnt+1) {
         answer = trip;
@@ -24,7 +19,7 @@ void dfs(string cur_loc, vector<string> &trip, int cur_cnt) {
         if (it->second == false) {
             it->second = true;
             trip.push_back(it->first);
-            dfs(it->first, trip, ++cur_cnt);
+            dfs(it->first, trip);
             trip.pop_back();
             it->second = false;
         }
@@ -49,7 +44,7 @@ vector<string> solution(vector<vector<string>> tickets) {
     
     vector<string> tmp;
     tmp.push_back("ICN");                                       
-    dfs("ICN", tmp, 0);
+    dfs("ICN", tmp);
     
     return answer;
 }
