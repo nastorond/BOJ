@@ -4,25 +4,23 @@
 
 using namespace std;
 
-void sol(int idx, int len, vector<int> nums, unordered_set<int>& sumOfSub) {
-    int n=0, lim=nums.size();
-    while (len>0) {
-        n += nums[idx];
-        idx++;
-        idx = idx%lim;
-        len--;
-    }
-    sumOfSub.insert(n);
-    return ;
-}
-
 int solution(vector<int> elements) {
-    int answer = 0, tmp=0, len=elements.size();
     unordered_set<int> sumOfSub;
+    int len = elements.size();
     
-    for (int i=1; i<=len; i++) {
-        for (int start=0; start<len; start++) {
-            sol(start, i, elements, sumOfSub);
+    // elements 배열을 두 배로 확장하여 원형 배열을 처리
+    vector<int> extendedElements = elements;
+    extendedElements.insert(extendedElements.end(), elements.begin(), elements.end());
+    
+    // 부분합의 길이를 1부터 len까지 처리
+    for (int subLen = 1; subLen <= len; subLen++) {
+        for (int start = 0; start < len; start++) {
+            // 슬라이딩 윈도우를 이용하여 부분합 계산
+            int sum = 0;
+            for (int i = start; i < start + subLen; i++) {
+                sum += extendedElements[i];
+            }
+            sumOfSub.insert(sum);
         }
     }
     
