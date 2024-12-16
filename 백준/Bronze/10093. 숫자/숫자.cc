@@ -5,11 +5,11 @@ using namespace std;
 int main () {
     ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
 
-    int a, b;
+    long long a, b;
     cin >> a >> b;
 
     if (a > b) {
-        int tmp = b;
+        long long tmp = b;
         b = a;
         a = tmp;
     }
