@@ -43,13 +43,15 @@ void solution(int st)
     //! 자신까지의거리 0
     dist[st] = 0;
 
-    std::priority_queue<std::pair<int, int>> pq;
+    //! basically pq in C++ is MAX Heap
+    //std::priority_queue<std::pair<int, int>> pq;
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, greater<std::pair<int, int>>> pq;
     pq.push(std::make_pair(0, st));
     while (!pq.empty())
     {
         //! pair info : first -> cur distance, second -> cur point
         std::pair<int, int> cur = pq.top(); pq.pop();
-        cur.first *= -1;
+        //cur.first *= -1;
 
         //! pair info : first -> next point, second -> weight
         for (std::pair<int, int> next : gp[cur.second])
@@ -59,7 +61,7 @@ void solution(int st)
             {
                 dist[next.first] = cur.first + next.second;
                 //! min heap
-                pq.push(std::make_pair(dist[next.first] * -1, next.first));
+                pq.push(std::make_pair(dist[next.first], next.first));
 
                 //! debug
                 //std::cout << "cur point : " << cur.second << " next point : " << next.first << "\n";
